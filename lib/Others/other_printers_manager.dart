@@ -31,7 +31,7 @@ class OtherPrinterManager {
     try {
       await FlutterBluePlus.startScan();
       if (Platform.isAndroid) {
-        _devicesstream.add((await FlutterBluePlus.systemDevices)
+        _devicesstream.add((await FlutterBluePlus.systemDevices())
             .map((e) => Printer(
                   address: e.remoteId.str,
                   name: e.platformName,
